@@ -36,6 +36,6 @@ for line in lines:
     
     # Save the image with participant's name
     output_filename = f'{DESTINATION_DIRECTORY}/{participant_name}.jpeg'
-    copy.save(output_filename)
+    copy.save(output_filename, dpi=(300, 300))
 
-images[0].save(f'{DESTINATION_DIRECTORY}/_print.pdf', save_all=True, append_images=images[1:])
+images[0].save(f'{DESTINATION_DIRECTORY}/_print.pdf', save_all=True, dpi=(300, 300), append_images=images[1:])
